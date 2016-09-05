@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/posts', 'PostController@getAll');
+Route::get('/posts/{category_id?}/{q?}', 'PostController@getAll');
+Route::post('/posts', 'PostController@add');
+Route::post('/update', 'PostController@update');
+
